@@ -74,6 +74,7 @@ body {
 .services-list img {
 	max-width: 150px;
 	max-height: 150px;
+	text-align: center;
 }
 
 .services-list li {
