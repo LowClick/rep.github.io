@@ -1,0 +1,195 @@
+:root {
+    --burgundy: #800000;
+    --burgundy-dark: #5a0000;
+    --burgundy-light: #a83232;
+    --bg-light: #a83232; /* был #f9f6f7, теперь бордовый светлый */
+    --white: #fff;
+    --gray: #80000022; /* прозрачный бордовый вместо серого */
+    --shadow: 0 4px 24px rgba(128,0,0,0.12);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-light);
+    color: var(--white); /* белый текст на бордовом фоне */
+}
+
+.header {
+    background: linear-gradient(90deg, var(--burgundy), var(--burgundy-dark));
+    color: var(--white);
+    padding: 40px 0 30px 0;
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.services {
+    padding: 40px 10px 30px 10px;
+    text-align: center;
+    background: var(--burgundy);
+    box-shadow: var(--shadow);
+    margin: 30px auto 0 auto;
+    max-width: 900px;
+    border-radius: 18px;
+    color: var(--white);
+}
+
+.services h2 {
+    color: var(--white);
+    font-size: 2.1rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.services-list li {
+    background: var(--burgundy-light);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(128,0,0,0.13);
+    padding: 28px 18px 22px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.15s, box-shadow 0.15s;
+    color: var(--white);
+}
+
+.services-list li:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(128,0,0,0.18);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.services-list h3 {
+    margin: 0 0 10px 0;
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.services-list p {
+    margin: 0;
+    color: #f9f6f7;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer {
+    background: linear-gradient(90deg, var(--burgundy-dark), var(--burgundy));
+    color: var(--white);
+    text-align: center;
+    padding: 32px 10px 24px 10px;
+    margin-top: 40px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -2px 16px rgba(128,0,0,0.13);
+}
+
+.footer h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    color: var(--white);
+}
+
+.footer p {
+    margin: 7px 0;
+    font-size: 1.05rem;
+}
+
+ #contact {
+    background: linear-gradient(90deg, var(--burgundy-dark), var(--burgundy));
+    color: var(--white);
+    text-align: center;
+    padding: 32px 10px 24px 10px;
+    margin-top: 40px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -2px 16px rgba(128,0,0,0.13);
+    }
+    #contact::before {
+        content: "";
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 8px;
+        border-radius: 24px 0 0 24px;
+        background: linear-gradient(180deg, #b03a5b 0%, #6e1834 100%);
+        z-index: 0;
+    }
+    #contact h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 24px;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 1.2px;
+    }
+    #contact p {
+        margin: 14px 0;
+        font-size: 1.12rem;
+        position: relative;
+        z-index: 1;
+    }
+    #contact a {
+        color: var(--accent-light);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.15s, text-shadow 0.15s;
+        text-shadow: 0 1px 8px #b03a5b44;
+    }
+    #contact a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+        text-shadow: 0 2px 12px #b03a5b88;
+    }
+
+@media (max-width: 700px) {
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+    .services {
+        padding: 24px 4px 18px 4px;
+    }
+    .header {
+        padding: 28px 0 18px 0;
+    }
+    .footer {
+        padding: 20px 4px 14px 4px;
+    }
+}
